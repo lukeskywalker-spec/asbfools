@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions View</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="submissions.css">
+</head>
+<body>
+    <div class="container submissions-container">
+        <h1>All Submissions</h1>
+        <div class="actions">
+            <button id="exportBtn" class="action-btn">Export to Excel</button>
+            <button id="clearDataBtn" class="action-btn warning">Clear All Data</button>
+            <button id="backBtn" class="action-btn secondary">Back to Form</button>
+        </div>
+        <div class="table-container">
+            <table id="submissionsTable">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Teacher</th>
+                        <th>Submission Time</th>
+                        <th>IP Address</th>
+                        <th>Browser</th>
+                        <th>OS</th>
+                        <th>Device</th>
+                    </tr>
+                </thead>
+                <tbody id="submissionsBody">
+                    <tr>
+                        <td colspan="7" class="loading">Loading submissions...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="submissions.js"></script>
+</body>
+</html>

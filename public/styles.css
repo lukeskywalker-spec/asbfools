@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+small {
+  color: #666;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1557b0;
+}
+
+#thankYouMessage {
+  text-align: center;
+  color: #4caf50;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 5px;
+  font-size: 14px;
+  display: none;
+}
+
+.bypass-controls {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.bypass-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bypass-btn {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #6c757d;
+}
+
+.bypass-btn.active {
+  background-color: #28a745;
+}
+
+.bypass-status {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}

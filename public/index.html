@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm">
+            <h1>Student Registration</h1>
+
+            <div class="form-group">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" name="studentId" required>
+                <small>Please enter your 7-digit Student ID</small>
+                <div id="studentIdError" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="teacher">Eagle Time Teacher:</label>
+                <select id="teacher" name="teacher" required>
+                    <option value="">Select a teacher</option>
+                    <option value="V. Blackburn">V. Blackburn</option>
+                    <option value="B. Berton">B. Berton</option>
+                    <option value="D. Compton">D. Compton</option>
+                    <option value="S. Donnell">S. Donnell</option>
+                    <option value="A. Davydova">A. Davydova</option>
+                    <option value="J. Fraczek">J. Fraczek</option>
+                    <option value="K. Galbraith">K. Galbraith</option>
+                    <option value="T. Gibson">T. Gibson</option>
+                    <option value="L. Gullitti">L. Gullitti</option>
+                    <option value="D. Haworth">D. Haworth</option>
+                    <option value="N. Hecker">N. Hecker</option>
+                    <option value="L. Hlinka">L. Hlinka</option>
+                    <option value="D. Ingram">D. Ingram</option>
+                    <option value="S. Jackson">S. Jackson</option>
+                    <option value="A. Kasper">A. Kasper</option>
+                    <option value="N. Kesler">N. Kesler</option>
+                    <option value="B. King">B. King</option>
+                    <option value="M. Knies">M. Knies</option>
+                    <option value="T. Lin">T. Lin</option>
+                    <option value="M. Madden">M. Madden</option>
+                    <option value="I. Mederos">I. Mederos</option>
+                    <option value="I. McClead">I. McClead</option>
+                    <option value="K. McMurtry">K. McMurtry</option>
+                    <option value="T. Miller">T. Miller</option>
+                    <option value="R. Nelson">R. Nelson</option>
+                    <option value="D. Nelson">D. Nelson</option>
+                    <option value="T. O'Connor">T. O'Connor</option>
+                    <option value="M. Palmer">M. Palmer</option>
+                    <option value="E. Peterson">E. Peterson</option>
+                    <option value="J. Peterson">J. Peterson</option>
+                    <option value="C. Potter">C. Potter</option>
+                    <option value="L. Rudolph">L. Rudolph</option>
+                    <option value="L. Shannon">L. Shannon</option>
+                    <option value="M. Styer">M. Styer</option>
+                    <option value="Q. Fortney">Q. Fortney</option>
+                    <option value="A. Semrau">A. Semrau</option>
+                    <option value="N. Woehlbrandt">N. Woehlbrandt</option>
+                    <option value="J. Yin">J. Yin</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+
+        <div id="thankYouMessage" style="display: none;">
+            <h2>Thank You! You've been entered into the giveaway</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="bypass.js"></script>
+</body>
+</html>
