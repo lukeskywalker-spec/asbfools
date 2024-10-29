@@ -114,12 +114,23 @@ app.post('/submit', (req, res) => {
   const parser = new UAParser(req.headers['user-agent']);
   const deviceInfo = JSON.stringify(parser.getResult());
 
+  // Check for bypass credentials
+  if (studentId === 'EVERGREENASBDEV' && teacher === 'V. Blackburn') {
+    // Skip saving to database and sending email
+    res.json({ 
+      success: true,
+      bypass: true,
+      message: 'Bypass successful, no data saved.' 
+    });
+    return; // Exit the handler early
+  }
+
   try {
     const stmt = db.prepare('INSERT INTO submissions (student_id, teacher, ip_address, device_info) VALUES (?, ?, ?, ?)');
 
     // Generate unique identifier for bypassed entries
     const bypassedIp = bypassIP ? `${ip}-${Date.now()}` : ip;
-    const bypassedStudentId = bypassStudentID ? `${studentId}-${Date.now()}` : studentId;
+    const bypassedStudentId = bypassStudentID ?`${studentId}-${Date.now()}` : studentId;
 
     stmt.run(bypassedStudentId, teacher, bypassedIp, deviceInfo);
 
@@ -169,6 +180,7 @@ app.post('/submit', (req, res) => {
     }
   }
 });
+
 
 // Get all submissions
 app.get('/get-submissions', (req, res) => {

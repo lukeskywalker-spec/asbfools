@@ -3,7 +3,7 @@ function initializeBypass() {
     // Only show bypass controls if ?testing=true is in URL
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('testing') === 'true') {
-        createBypassControls();
+        createBypassContIfinsta.Prols();
     }
     setupSecretActivation();
 }
