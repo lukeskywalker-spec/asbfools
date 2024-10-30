@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Validate student ID
     studentIdInput.addEventListener('input', () => {
         // Special case for bypass code
-        if (studentIdInput.value === 'EVERGREENASBDEV') {
+        if (studentIdInput.value === 'EVERGREENASBDEV' || 'EVERGREENASBTEST') {
             studentIdError.style.display = 'none';
             submitBtn.disabled = false;
             studentIdInput.setCustomValidity(''); // Clear validation message
             return;
         }
-
+                
         const isValid = /^\d{7}$/.test(studentIdInput.value);
         studentIdError.style.display = 'none';
         submitBtn.disabled = !isValid;
